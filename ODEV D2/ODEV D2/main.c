@@ -13,7 +13,7 @@
 int main() {
     
     printf("******SEZAR ALGORIMASINI BASLATINIZ******\n");
-    char metin[100];
+    char metin[100],desifre[100];
     int anahtar;
 
   
@@ -34,10 +34,12 @@ int main() {
             else if (metin[i] >= 'A' && metin[i] <= 'Z') {
                 metin[i] = (metin[i] - 'A' + anahtar) % 26 + 'A';
             }
+        desifre[i]=metin[i]-anahtar;
     }
    
     printf("olusan sifre= %s\n",metin);
-
+printf("desifre= %s\n",desifre);
+   
     return 0;
 }
 
